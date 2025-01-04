@@ -13,10 +13,6 @@ import blog7 from "../../public/blogside4.jpeg"
 import blog8 from "../../public/blogside5.jpeg"
 import blog9 from "../../public/blogside6.jpeg"
 import blog10 from "../../public/blogside7.jpeg"
-import blogproduct1 from "../../public/blogproduct1.jpeg"
-import blogproduct2 from "../../public/blogproduct2.jpeg"
-import blogproduct3 from "../../public/blogproduct3.jpeg"
-import blogproduct4 from "../../public/blogproduct4.jpeg"
 import Footer from "../Footer";
 import Navbar from "../navbar";
 
