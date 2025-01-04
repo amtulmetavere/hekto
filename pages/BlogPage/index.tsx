@@ -64,133 +64,112 @@ function BlogPage() {
       <div className="container mx-auto px-4 py-8">
         <div className="grid gap-10 lg:grid-cols-[2fr_1fr]">
           <main className="space-y-10">
-            {blogPosts.map((blog) => (
-              <article key={blog.id} className="space-y-4">
-                <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
-                  <Image
-                    alt={blog.title}
-                    src={blog.image}
-                    layout="fill"
-                    objectFit="cover"
-                    quality={75}
-                    sizes="(min-width: 1024px) 66vw, 100vw"
-                  />
-                </div>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <span className="text-purple-600">Self Access</span>
-                    <div className="flex text-gray-600 items-center gap-1">
-                      {/* ... (Calendar SVG remains unchanged) */}
-                    </div>
-                  </div>
-                  <h2 className="text-2xl font-semibold text-purple-800 hover:text-purple-600">
-                    <a href={blog.link}>{blog.title}</a>
-                  </h2>
-                  <p className="text-gray-600">{blog.content}</p>
-                  <a className="inline-block text-sm font-medium text-purple-600 hover:text-purple-800" href={blog.link}>
-                    Read More →
-                  </a>
-                </div>
-              </article>
-            ))}
-          </main>
-
-          <aside className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-xl font-semibold text-purple-800">Search</h2>
-              <input
-                className="flex h-9 rounded-md border-gray-900 border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm text-black file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed  disabled:opacity-50 md:text-sm w-full"
-                placeholder="Search..."
-                type="search" />
-            </div>
-            <div className="space-y-4">
-              <h2 className="text-xl font-semibold text-purple-800">Categories</h2>
-              <div className="space-y-2">
-                <a className="block text-gray-600 hover:text-purple-600" href="#">
-                  November 2023
-                </a>
-                <a className="block text-gray-600 hover:text-purple-600" href="#">
-                  October 2023
-                </a>
-                <a className="block text-gray-600 hover:text-purple-600" href="#">
-                  September 2023
-                </a>
-              </div>
-            </div>
-            
-            
-            <div className="space-y-4">
-              <h2 className="text-xl font-semibold text-purple-800">Recent Post</h2>
-              <div className="space-y-4">
-                {sideBlogs.map((sideBlog) => (
-                  <a key={sideBlog.id} className="flex gap-3 group" href={sideBlog.link}>
-                    <div className="relative h-[60px] w-[100px] flex-shrink-0 overflow-hidden rounded-md">
-                      <Image
-                        alt="Recent blog"
-                        src={sideBlog.image}
-                        layout="fill"
-                        objectFit="cover"
-                        className="transition-transform group-hover:scale-105"
-                        quality={75}
-                      />
-                    </div>
-                    <p className="text-sm text-gray-600 group-hover:text-purple-600">{sideBlog.content}</p>
-                  </a>
-                ))}
-              </div>
-            </div>
-            <div className="space-y-4">
-                  <h2 className="text-xl font-semibold text-purple-800">Sale Product</h2>
-                  <div className="space-y-4">
-                      {saleProducts.map((saleProduct) => (
-                          <a key={saleProduct.id} className="flex gap-3 group" href={saleProduct.link}>
-                              <div className="relative h-[60px] w-[100px] flex-shrink-0 overflow-hidden rounded-md">
-                                  <Image
-                                      alt="Sale Product"
-                                      src={saleProduct.image}
-                                      layout="fill"
-                                      objectFit="cover"
-                                      className="transition-transform group-hover:scale-105"
-                                      quality={75}
-                                  />
-                              </div>
-                              <div>
-                                  <p className="text-sm text-gray-600 display-flex deflex-coloum group-hover:text-purple-600">
-                                      {saleProduct.title}
-                                  </p>
-
-                                  <p className="text-sm text-purple-600 display-flex deflex-coloum group-hover:text-purple-600">
-                                      {saleProduct.price}
-                                  </p>
-                              </div>
-                          </a>
-                      ))}
-                  </div>
-              </div>
-
-              <div className="space-y-4">
-            <h2 className="text-xl font-semibold text-purple-800">Other Product</h2>
-            <div className="grid grid-cols-2 gap-4">
-            {otherProducts.map((otherProducts) => (
-             <div  className="space-y-2">
-            <a key={otherProducts.id} className="group block" href={otherProducts.link}>
-              <div className="relative aspect-square overflow-hidden rounded-md">
-                <Image
-                  alt={''}
-                  src={otherProducts.image}
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition-transform group-hover:scale-105"
-                />
-              </div>
-              <p className="mt-2 text-center text-sm text-gray-600 group-hover:text-purple-600">
-              {otherProducts.title}
-              </p>
-            </a>
-          </div>
-        ))}
+  {blogPosts.map((blog) => (
+    <article key={blog.id} className="space-y-4">
+      <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
+        <Image
+          alt={blog.title}
+          src={blog.image}
+          layout="fill"
+          objectFit="cover"
+          quality={75}
+          sizes="(min-width: 1024px) 66vw, 100vw"
+        />
       </div>
+      <div className="space-y-3">
+        <div className="flex items-center gap-4 text-sm text-muted-foreground">
+          <span className="text-purple-600">Self Access</span>
+          <div className="flex text-gray-600 items-center gap-1">
+            {/* ... (Calendar SVG remains unchanged) */}
           </div>
+        </div>
+        <h2 className="text-2xl font-semibold text-purple-800 hover:text-purple-600">
+          <a href={blog.link}>{blog.title}</a>
+        </h2>
+        <p className="text-gray-600">{blog.content}</p>
+        <a className="inline-block text-sm font-medium text-purple-600 hover:text-purple-800" href={blog.link}>
+          Read More →
+        </a>
+      </div>
+    </article>
+  ))}
+</main>
+
+{/* Side Blogs */}
+<div className="space-y-4">
+  <h2 className="text-xl font-semibold text-purple-800">Recent Post</h2>
+  <div className="space-y-4">
+    {sideBlogs.map((sideBlog) => (
+      <a key={sideBlog.id} className="flex gap-3 group" href={sideBlog.link}>
+        <div className="relative h-[60px] w-[100px] flex-shrink-0 overflow-hidden rounded-md">
+          <Image
+            alt="Recent blog"
+            src={sideBlog.image}
+            layout="fill"
+            objectFit="cover"
+            className="transition-transform group-hover:scale-105"
+            quality={75}
+          />
+        </div>
+        <p className="text-sm text-gray-600 group-hover:text-purple-600">{sideBlog.content}</p>
+      </a>
+    ))}
+  </div>
+</div>
+
+{/* Sale Products */}
+<div className="space-y-4">
+  <h2 className="text-xl font-semibold text-purple-800">Sale Product</h2>
+  <div className="space-y-4">
+    {saleProducts.map((saleProduct) => (
+      <a key={saleProduct.id} className="flex gap-3 group" href={saleProduct.link}>
+        <div className="relative h-[60px] w-[100px] flex-shrink-0 overflow-hidden rounded-md">
+          <Image
+            alt="Sale Product"
+            src={saleProduct.image}
+            layout="fill"
+            objectFit="cover"
+            className="transition-transform group-hover:scale-105"
+            quality={75}
+          />
+        </div>
+        <div>
+          <p className="text-sm text-gray-600 display-flex deflex-coloum group-hover:text-purple-600">
+            {saleProduct.title}
+          </p>
+          <p className="text-sm text-purple-600 display-flex deflex-coloum group-hover:text-purple-600">
+            {saleProduct.price}
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+</div>
+
+{/* Other Products */}
+<div className="space-y-4">
+  <h2 className="text-xl font-semibold text-purple-800">Other Product</h2>
+  <div className="grid grid-cols-2 gap-4">
+    {otherProducts.map((otherProduct) => (
+      <div key={otherProduct.id} className="space-y-2">
+        <a className="group block" href={otherProduct.link}>
+          <div className="relative aspect-square overflow-hidden rounded-md">
+            <Image
+              alt={otherProduct.title}
+              src={otherProduct.image}
+              layout="fill"
+              objectFit="cover"
+              className="transition-transform group-hover:scale-105"
+            />
+          </div>
+          <p className="mt-2 text-center text-sm text-gray-600 group-hover:text-purple-600">
+            {otherProduct.title}
+          </p>
+        </a>
+      </div>
+    ))}
+  </div>
+</div>
 
               
             <div className="space-y-4">
