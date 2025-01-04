@@ -13,6 +13,10 @@ import blog7 from "../../public/blogside4.jpeg"
 import blog8 from "../../public/blogside5.jpeg"
 import blog9 from "../../public/blogside6.jpeg"
 import blog10 from "../../public/blogside7.jpeg"
+import blogproduct1 from "../../public/blogproduct1.jpeg"
+import blogproduct2 from "../../public/blogproduct2.jpeg"
+import blogproduct3 from "../../public/blogproduct3.jpeg"
+import blogproduct4 from "../../public/blogproduct4.jpeg"
 import Footer from "../Footer";
 import Navbar from "../navbar";
 
@@ -38,7 +42,12 @@ function BlogPage() {
       { id: 3, image: blog10, title: "Super labtop silver ProXL", price: "$129.00", link: "#" },
   ];
 
-  
+    const otherProducts = [
+        { id: 1, image: blogproduct1, title: "Quick link set", link: "#" },
+        { id: 2, image: blogproduct2, title: "Bag presents", link: "#" },
+        { id: 3, image: blogproduct3, title: "Shoes green", link: "#" },
+        { id: 4, image: blogproduct4, title: "Phone in", link: "#" },
+    ];
   return (
     <div className="w-full bg-gray-50">
       <Navbar />
@@ -158,6 +167,32 @@ function BlogPage() {
                       ))}
                   </div>
               </div>
+
+              <div className="space-y-4">
+            <h2 className="text-xl font-semibold text-purple-800">Other Product</h2>
+            <div className="grid grid-cols-2 gap-4">
+            {otherProducts.map((otherProducts) => (
+             <div  className="space-y-2">
+            <a key={otherProducts.id} className="group block" href={otherProducts.link}>
+              <div className="relative aspect-square overflow-hidden rounded-md">
+                <Image
+                  alt={''}
+                  src={otherProducts.image}
+                  layout="fill"
+                  objectFit="cover"
+                  className="transition-transform group-hover:scale-105"
+                />
+              </div>
+              <p className="mt-2 text-center text-sm text-gray-600 group-hover:text-purple-600">
+              {otherProducts.title}
+              </p>
+            </a>
+          </div>
+        ))}
+      </div>
+          </div>
+
+              
             <div className="space-y-4">
               <h2 className="text-xl font-semibold text-purple-800">Follow</h2>
               <div className="flex gap-4">
