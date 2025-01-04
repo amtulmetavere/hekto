@@ -70,7 +70,7 @@ function Banner()  {
         <p className="description">{slide.description}</p>
         <button
           className="bg-[#FB2E86] text-white py-3 px-6 rounded-lg text-lg cursor-pointer hover:bg-[#F94C9B] transition-colors"
-         onClick={()=>router.push("/cart")}>
+         onClick={()=>router.push("/product")}>
           Shop Now
         </button>
       </div>

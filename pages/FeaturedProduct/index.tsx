@@ -101,7 +101,7 @@ function FeaturedProduct() {
                 style={{ color: "transparent" }}
               />
               <div className="bottom-0 w-full text-white text-center opacity-0 group-hover:opacity-100 transition-opacity">
-                <button className="w-[94px] h-6 rounded-[2px] mb-2 text-sm bg-[#08D15F] hover:bg-green-700 transition-colors">
+                <button className="w-[94px] h-6 rounded-[2px] mb-2 text-sm bg-[#08D15F] hover:bg-green-700 transition-colors" onClick={()=>router.push("/productdetail")}>
                   View Details
                 </button>
               </div>
@@ -154,7 +154,7 @@ function FeaturedProduct() {
                 style={{ color: "transparent" }}
               />
               <div className="bottom-0 w-full text-white text-center opacity-0 group-hover:opacity-100 transition-opacity">
-                <button className="w-[94px] h-6 rounded-[2px] mb-2 text-sm bg-[#08D15F] hover:bg-green-700 transition-colors">
+                <button className="w-[94px] h-6 rounded-[2px] mb-2 text-sm bg-[#08D15F] hover:bg-green-700 transition-colors" onClick={()=>router.push("/productdetail")}>
                   View Details
                 </button>
               </div>
@@ -207,7 +207,7 @@ function FeaturedProduct() {
                 style={{ color: "transparent" }}
               />
               <div className="bottom-0 w-full text-white text-center opacity-0 group-hover:opacity-100 transition-opacity">
-                <button className="w-[94px] h-6 rounded-[2px] mb-2 text-sm bg-[#08D15F] hover:bg-green-700 transition-colors">
+                <button className="w-[94px] h-6 rounded-[2px] mb-2 text-sm bg-[#08D15F] hover:bg-green-700 transition-colors" onClick={()=>router.push("/productdetail")}>
                   View Details
                 </button>
               </div>

@@ -1,6 +1,6 @@
 // components/LatestProducts.js
 import Image from 'next/image'; // Import next/image for optimized image handling
-
+import {useRouter} from 'next/navigation'
 const products = [
   {
     id: 1,
@@ -47,6 +47,7 @@ const products = [
 ];
 
 const LatestProducts = () => {
+  const router = useRouter(); // Initialize useRouter for navigation
   return (
     <div className="w-full bg-white py-20">
       <div className="w-full">
@@ -77,7 +78,7 @@ const LatestProducts = () => {
                 </span>
 
                 <div className="absolute bottom-6 left-4 flex items-center justify-center flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button className="bg-white p-2 rounded-full shadow group-hover:bg-[#eeeffb]" onClick={() => console.log("View Details clicked")} title="Add to Favorites">
+                  <button className="bg-white p-2 rounded-full shadow group-hover:bg-[#eeeffb]" onClick={()=>router.push("/cart")} title="Add to Favorites">
                     <svg
                       stroke="currentColor"
                       fill="none"

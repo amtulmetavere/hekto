@@ -149,7 +149,7 @@ function Navbar() {
             </div>
             <div>
   <div className="flex items-center justify-center gap-2 sm:gap-4">
-    <h1 className="font-sans text-sm sm:text-[16px] font-semibold leading-4 text-[#fb2e86]">Login</h1>
+    <button className="font-sans text-sm sm:text-[16px] font-semibold leading-4 text-[#fb2e86]"  onClick={()=>router.push("/Login")}   aria-label="Login">Login</button>
    
     <button
           className="flex justify-center  items-center w-[16px] h-[16px]"

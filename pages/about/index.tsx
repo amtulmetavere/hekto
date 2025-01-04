@@ -10,6 +10,7 @@ import moneyicon from "../../public/moneyicon.png";
 import badgeicon from "../../public/badgeicon.png";
 import houricon from "../../public/24icon.png";
 import client from "../../public/client.jpeg";
+import client2 from "../../public/client2.jpeg";
 import client3 from "../../public/client3.jpeg";
 import {useRouter} from 'next/navigation'
 const About = () => {
@@ -46,6 +47,13 @@ const About = () => {
       image: client3,
       feedback:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non duis ultrices quam vel dui sollicitudin aliquet id arcu.",
+    },
+    {
+      name: "Alen",
+      role: "Local Developer",
+      image: client2,
+      feedback:
+        "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut sit amet ultricies nisi.",
     },
     {
       name: "John Smith",
