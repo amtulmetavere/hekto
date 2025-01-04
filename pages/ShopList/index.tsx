@@ -35,9 +35,7 @@ const ShopList = () => {
       setSortBy(event.target.value);
     };
   
-    const handleViewChange = (mode: string) => {
-      setViewMode(mode);
-    };
+ 
     return (
         <div className="w-full bg-gray-50">
          <Navbar />
