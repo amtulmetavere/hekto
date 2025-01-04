@@ -3,13 +3,14 @@
 import React from 'react';
 import Image from 'next/image';  // Importing the Image component from Next.js
 import Link from 'next/link';  // Importing Link from Next.js
-
+import {useRouter} from 'next/navigation'
 
 interface LatestBlogProps {
   limit: number; // Define the type for the 'limit' prop
 }
 
 const blogPosts = [
+  
   {
     id: 1,
     image: "/blog1.png",  // Path relative to the public folder
@@ -55,8 +56,9 @@ const blogPosts = [
 
 const LatestBlog: React.FC<LatestBlogProps> = ({ limit }) => {
   const recentBlogs = blogPosts.slice(0, limit);
-
+ const router = useRouter(); 
   return (
+    
     <div className="w-full bg-white py-20">
       <h2 className="text-center text-[#151875] text-3xl font-bold mb-12">Latest Blog</h2>
       <div className="w-[90%] lg:w-[1177px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-xl mx-auto">
@@ -81,8 +83,8 @@ const LatestBlog: React.FC<LatestBlogProps> = ({ limit }) => {
             </div>
             <h3 className="font-bold text-lg mt-4 text-[#151875]">{post.title}</h3>
             <p className="text-gray-600 mt-2">{post.description}</p>
-            <Link href="/blog" passHref>
-              <button className="underline text-sm font-medium mt-4 text-[#151875]">
+            <Link href="/BlogPage" passHref>
+              <button className="underline text-sm font-medium mt-4 text-[#151875]" onClick={()=>router.push("/BlogPage")}>
                 Read More
               </button>
             </Link>
