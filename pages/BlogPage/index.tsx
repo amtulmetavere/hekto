@@ -1,7 +1,7 @@
 "use client"; // Marks this as a Client Component
 
 
-import React, { useState } from 'react';
+import React from 'react';
 import Image from "next/image";
 import blog1 from "../../public/blogpage1.jpeg"
 import blog2 from "../../public/blogpage2.jpeg"
@@ -42,12 +42,7 @@ function BlogPage() {
       { id: 3, image: blog10, title: "Super labtop silver ProXL", price: "$129.00", link: "#" },
   ];
 
-    const otherProducts = [
-        { id: 1, image: blogproduct1, title: "Quick link set", link: "#" },
-        { id: 2, image: blogproduct2, title: "Bag presents", link: "#" },
-        { id: 3, image: blogproduct3, title: "Shoes green", link: "#" },
-        { id: 4, image: blogproduct4, title: "Phone in", link: "#" },
-    ];
+  
   return (
     <div className="w-full bg-gray-50">
       <Navbar />
