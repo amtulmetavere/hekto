@@ -1,7 +1,7 @@
 "use client"; // Marks this as a Client Component
 
 
-import React, { useState } from 'react';
+import React from 'react';
 import Footer from "../Footer";
 import Navbar from "../navbar";
 const Login = () => {
