@@ -10,7 +10,6 @@ import moneyicon from "../../public/moneyicon.png";
 import badgeicon from "../../public/badgeicon.png";
 import houricon from "../../public/24icon.png";
 import client from "../../public/client.jpeg";
-import client2 from "../../public/client2.jpeg";
 import client3 from "../../public/client3.jpeg";
 import {useRouter} from 'next/navigation'
 const About = () => {
