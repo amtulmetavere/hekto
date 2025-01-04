@@ -63,7 +63,7 @@ function BlogPage() {
 
       <div className="container mx-auto px-4 py-8">
         <div className="grid gap-10 lg:grid-cols-[2fr_1fr]">
-          <main className="space-y-10">
+        <main className="space-y-10">
   {blogPosts.map((blog) => (
     <article key={blog.id} className="space-y-4">
       <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
@@ -95,7 +95,31 @@ function BlogPage() {
   ))}
 </main>
 
-{/* Side Blogs */}
+          <aside className="space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-xl font-semibold text-purple-800">Search</h2>
+              <input
+                className="flex h-9 rounded-md border-gray-900 border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm text-black file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed  disabled:opacity-50 md:text-sm w-full"
+                placeholder="Search..."
+                type="search" />
+            </div>
+            <div className="space-y-4">
+              <h2 className="text-xl font-semibold text-purple-800">Categories</h2>
+              <div className="space-y-2">
+                <a className="block text-gray-600 hover:text-purple-600" href="#">
+                  November 2023
+                </a>
+                <a className="block text-gray-600 hover:text-purple-600" href="#">
+                  October 2023
+                </a>
+                <a className="block text-gray-600 hover:text-purple-600" href="#">
+                  September 2023
+                </a>
+              </div>
+            </div>
+            
+            
+           {/* Side Blogs */}
 <div className="space-y-4">
   <h2 className="text-xl font-semibold text-purple-800">Recent Post</h2>
   <div className="space-y-4">
